@@ -25,7 +25,7 @@ One-Click to deploy well-designed ChatGPT web UI on Vercel.
 
 - **Deploy for free with one-click** on Vercel in under 1 minute
 - Privacy first, all data stored locally in the browser
-- Markdown support: LaTex, mermaid, code highlight, etc.
+- Markdown support: LaTex, mermaid, code highlight, etc..
 - Responsive design, dark mode and PWA
 - Fast first screen loading speed (~100kb), support streaming response
 - New in v2: create, share and debug your chat tools with prompt templates (mask)
