@@ -2,11 +2,10 @@
 import "./styles/globals.scss";
 import "./styles/markdown.scss";
 import "./styles/highlight.scss";
-import { getBuildConfig } from "./config/build";
+import { getClientConfig } from "./config/client";
+import { type Metadata } from "next";
 
-const buildConfig = getBuildConfig();
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "ChatGPT Next Web",
   description: "Your personal ChatGPT Chat Bot.",
   viewport: {
@@ -32,13 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="version" content={buildConfig.commitId} />
+        <meta name="config" content={JSON.stringify(getClientConfig())} />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <link rel="preconnect" href="https://fonts.proxy.ustclug.org"></link>
-        <link
-          rel="stylesheet"
-          href="https://fonts.proxy.ustclug.org/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap"
-        ></link>
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
       <body>{children}</body>
